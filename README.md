@@ -31,4 +31,5 @@ Esquemático:
 ![Esquematico](./imagenes/Esquematico.svg)
 
 2D:
+
 ![2D](./imagenes/2D.svg)
