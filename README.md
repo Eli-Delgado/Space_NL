@@ -5,6 +5,6 @@ Space NL nace como un proyecto ciudadano con el objetivo de diseñar y construir
 
 # Diagramas:
 
-![Esquematico] (https://github.com/Eli-Delgado/Space_NL/blob/main/imagenes/Esquematico.png)
+![Esquematico](./imagenes/Esquematico.svg)
 
-![2D] (https://github.com/Eli-Delgado/Space_NL/blob/main/imagenes/2D.png)
+![2D](./imagenes/2D.svg)
