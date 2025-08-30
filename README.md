@@ -26,7 +26,7 @@ El sistema está construido alrededor de un **ESP32**, que se encarga de recolec
 🔋 La alimentación se gestiona desde una batería de 3.7V, regulada a **5V y 3.3V** para los distintos módulos.
 
 
-
+## Tabla de componentes:
 
  **Number** | Name                                       | Designator | Footprint                                           | Quantity 
 :----------:|:-----------------------------------------------:|:---------------------:|:-------------------------------------------------------------:|:-----------------:
@@ -89,5 +89,5 @@ El software de telemetría está diseñado en **Python con PyQt5** y organiza el
 Los datos se guardan en archivos **CSV** con el formato:
 - esp32_data_YYYYMMDD_HHMMSS.csv
 
-📷 **Arquitectura de software**:
+## 📷 **Arquitectura de software**:
 ![Arquitectura](./imagenes/arquitectura.jpg)
