@@ -11,45 +11,29 @@ Este proyecto implementa un sistema completo de **telemetría para cohetes exper
 
 El sistema está construido alrededor de un **ESP32**, que se encarga de recolectar información de distintos sensores y transmitirla.
 
-### 🔌 Componentes principales
-- **ESP32** – Microcontrolador principal.  
-- **GY-91 (IMU: MPU9250 + BMP280)** – Aceleración, giroscopio, magnetómetro y presión/barómetro.  
-- **GPS NEO-6M** – Posición y velocidad.  
-- **Sensor MQ135** – Calidad de aire (detección de gases).  
-- **Sensor DHT22** – Temperatura y humedad.  
-- **Módulo LoRa** – Comunicación inalámbrica de largo alcance.  
-- **Módulo MicroSD** – Almacenamiento local de datos.  
-- **Buzzer** – Señalización acústica.  
-- **Servo** – Para sistemas mecánicos auxiliares.  
-- **Fuente de alimentación** – TP4056 para carga de batería LiPo y MT3608 como convertidor step-up a 5V.  
+## 🔩 Tabla de componentes:
 
-🔋 La alimentación se gestiona desde una batería de 3.7V, regulada a **5V y 3.3V** para los distintos módulos.
-
-
-## Tabla de componentes:
-
- **Number** | Name                                       | Designator | Footprint                                           | Quantity 
-:----------:|:-----------------------------------------------:|:---------------------:|:-------------------------------------------------------------:|:-----------------:
- **1**      | ""BUZZER-12X9""                   | ""BUZZER1""           | ""BUZ-TH_BD12.0-P7.60-D0.6-FD"" | 1                 
- **2**      | ""100nF""                               | ""C1""           | ""RAD-0.1""                                         | 1                 
- **3**      | ""AUIRF3205-VB""                 | ""Q1""           | ""TO-220-3_L10.0-W4.6-P2.54-L"" | 1                 
- **4**      | ""2.7k""                                 | ""R1""           | ""R_AXIAL-0.4""                                 | 1                 
- **5**      | ""10k""                                   | ""R2""           | ""R_AXIAL-0.4""                                 | 1                 
- **6**      | ""1k""                                     | ""R3""           | ""R_AXIAL-0.4""                                 | 1                 
- **7**      | ""Servo-1.27""                     | ""S1""           | ""SERVO-1.27""                                   | 1                 
- **8**      | ""LoRa""                                 | ""U1""           | ""LORA-BREAKOUTBOARD""                   | 1                 
- **9**      | ""GY-91""                               | ""U2""           | ""GY-91""                                             | 1                 
- **10**     | ""GY-NEO6MV2""                     | ""U8""           | ""GY-NEO6MV2""                                   | 1                 
- **11**     | ""MicroSD Card Adapter"" | ""U9""           | ""MICROSD CARD READER""                 | 1                 
- **12**     | ""MT3608""                             | ""U10""         | ""MT3608_V2""                                     | 1                 
- **13**     | ""TP4056 MODULE""               | ""U11""         | ""TP4056""                                           | 1                 
- **14**     | ""ESP32-DEVKITC""               | ""U12""         | ""ESP32 DEVKITC V4 ESP32 WROOM 32D""                          | 1                 
- **15**     | ""MQ135""                               | ""U13""         | ""MQ135""                                             | 1                 
- **16**     | ""DHT22""                               | ""U14""         | ""SENSOR-TH_HAIGU_DHT22""             | 1                 
+| **#** | **Nombre**                | **Designador** | **Función / Descripción**                                                                 | **Footprint**                                      | **Cantidad** |
+|:-----:|---------------------------|:--------------:|-------------------------------------------------------------------------------------------|---------------------------------------------------|:------------:|
+| 1     | Buzzer-12x9               | BUZZER1        | Señalización acústica                                                                     | BUZ-TH_BD12.0-P7.60-D0.6-FD                       | 1            |
+| 2     | 100nF                     | C1             | Condensador de desacoplo                                                                  | RAD-0.1                                           | 1            |
+| 3     | AUIRF3205-VB              | Q1             | MOSFET de potencia                                                                        | TO-220-3_L10.0-W4.6-P2.54-L                       | 1            |
+| 4     | Resistencia 2.7k          | R1             | Divisor de voltaje para medición de batería                                               | R_AXIAL-0.4                                       | 1            |
+| 5     | Resistencia 10k           | R2             | Divisor de voltaje para medición de batería                                               | R_AXIAL-0.4                                       | 1            |
+| 6     | Resistencia 1k            | R3             | Limitación de corriente para buzzer                                                       | R_AXIAL-0.4                                       | 1            |
+| 7     | Servo-1.27                | S1             | Accionamiento mecánico auxiliar                                                           | SERVO-1.27                                        | 1            |
+| 8     | Módulo LoRa               | U1             | Comunicación inalámbrica de largo alcance                                                 | LORA-BREAKOUTBOARD                                | 1            |
+| 9     | GY-91 (IMU: MPU9250+BMP280)| U2             | Aceleración, giroscopio, magnetómetro y presión/barómetro                                 | GY-91                                             | 1            |
+| 10    | GPS NEO-6M                | U8             | Posición y velocidad                                                                      | GY-NEO6MV2                                        | 1            |
+| 11    | MicroSD Card Adapter      | U9             | Almacenamiento local de datos                                                             | MICROSD CARD READER                               | 1            |
+| 12    | MT3608                    | U10            | Convertidor step-up a 5V                                                                  | MT3608_V2                                         | 1            |
+| 13    | TP4056 Module             | U11            | Cargador de batería LiPo                                                                  | TP4056                                            | 1            |
+| 14    | ESP32-DEVKITC             | U12            | Microcontrolador principal                                                                | ESP32 DEVKITC V4 ESP32 WROOM 32D                  | 1            |
+| 15    | MQ135                     | U13            | Sensor de calidad de aire                                                                 | MQ135                                             | 1            |
+| 16    | DHT22                     | U14            | Sensor de temperatura y humedad                                                           | SENSOR-TH_HAIGU_DHT22                             | 1            |
 
 
-
-## Diagramas:
+## 🖇️ Diagramas:
 
 ### 📷 **Esquemático**:
 
