@@ -1,4 +1,8 @@
 # 🚀 Space_NL
+
+[![es](https://img.shields.io/badge/lang-ES-red.svg)](./README.md)
+[![en](https://img.shields.io/badge/lang-EN-blue.svg)](./README_EN.md)
+
 Space NL was born as a citizen project with the goal of designing and building a low-cost experimental rocket that is accessible and easy to operate. Its purpose is to promote citizen science, encourage learning in STEM areas (Science, Technology, Engineering, and Mathematics), and foster technological democratization.
 
 # 📡 Rocket Telemetry System
