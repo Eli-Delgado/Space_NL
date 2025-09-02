@@ -77,4 +77,4 @@ Los datos se guardan en archivos **CSV** con el formato:
 ![Arquitectura](./imagenes/arquitectura.jpg)
 
 ## 📷 **Interfaz**:
-![Interfaz](./imagenes/interfaz.jpg)
+![Interfaz](./imagenes/Interfaz.jfif)
