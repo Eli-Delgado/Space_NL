@@ -75,3 +75,6 @@ Los datos se guardan en archivos **CSV** con el formato:
 
 ## 📷 **Arquitectura de software**:
 ![Arquitectura](./imagenes/arquitectura.jpg)
+
+## 📷 **Interfaz**:
+![Interfaz](./imagenes/interfaz.jpg)
